@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Preparation Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Exam Planner</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html">Add Task</a>
+            <a href="stats.html">Statistics</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme">☀️ Light</button>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-header">
+        <h2>Exam Preparation Tasks</h2>
+        <a href="form.html" class="btn-primary">+ Add New Task</a>
+    </section>
+
+    <section class="counters">
+        <div class="counter-card">
+            <h3>Total</h3>
+            <p id="totalCount">0</p>
+        </div>
+        <div class="counter-card">
+            <h3>Completed</h3>
+            <p id="completedCount">0</p>
+        </div>
+        <div class="counter-card">
+            <h3>Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+    </section>
+
+    <section class="progress-container panel">
+        <div class="section-title-row">
+            <h3>Exam Preparation Progress</h3>
+            <span id="progressPercent" class="muted-label">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+        <p id="progressText"></p>
+    </section>
+
+    <section class="toolbar panel">
+        <div class="search-box">
+            <label class="sr-only" for="searchInput">Search tasks</label>
+            <input type="text" id="searchInput" placeholder="Search by subject, topic or notes">
+        </div>
+        <div class="sort-box">
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+                <option value="date-asc">Nearest exam</option>
+                <option value="date-desc">Latest exam</option>
+                <option value="priority-desc">Highest priority</option>
+                <option value="priority-asc">Lowest priority</option>
+                <option value="created-desc">Newest added</option>
+                <option value="created-asc">Oldest added</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="urgent">Urgent</button>
+    </section>
+
+    <section id="taskList" class="task-list"></section>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

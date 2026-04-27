@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task | Exam Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Exam Planner</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html">Add Task</a>
+            <a href="stats.html">Statistics</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme">☀️ Light</button>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-header">
+        <h2>Add New Exam Task</h2>
+    </section>
+
+    <form id="taskForm" class="task-form">
+        <label>
+            Subject
+            <input type="text" id="subject" maxlength="100">
+        </label>
+
+        <label>
+            Topic
+            <input type="text" id="topic" maxlength="150">
+        </label>
+
+        <label>
+            Exam Date
+            <input type="date" id="examDate">
+        </label>
+
+        <label>
+            Priority
+            <select id="priority">
+                <option value="">Select priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </label>
+
+        <label>
+            Notes
+            <textarea id="notes" rows="4" maxlength="300"></textarea>
+        </label>
+
+        <div class="form-buttons">
+            <button type="submit" class="btn-primary">Save</button>
+            <a href="index.html" class="btn-secondary">Cancel</a>
+        </div>
+    </form>
+
+    <div class="progress-box panel">
+        <div class="section-title-row">
+            <h3>Your preparation progress</h3>
+            <span id="progressPercent" class="muted-label">0%</span>
+        </div>
+        <p id="progressText">0 of 0 exams completed</p>
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

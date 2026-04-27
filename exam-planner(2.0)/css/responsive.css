@@ -1,0 +1,69 @@
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .theme-toggle {
+        width: 100%;
+    }
+
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .form-buttons,
+    .toolbar {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sort-box {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page-header h2 {
+        font-size: 18px;
+    }
+
+    .counter-card p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-wrapper {
+        max-width: 260px;
+        height: 260px;
+    }
+}

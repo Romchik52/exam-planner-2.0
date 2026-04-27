@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics | Exam Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Exam Planner</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html">Add Task</a>
+            <a href="stats.html">Statistics</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme">☀️ Light</button>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-header">
+        <h2>Statistics Overview</h2>
+    </section>
+
+    <section class="stats-cards">
+        <div class="counter-card">
+            <h3>Total Tasks</h3>
+            <p id="statsTotal">0</p>
+        </div>
+        <div class="counter-card">
+            <h3>Completion Rate</h3>
+            <p id="statsRate">0%</p>
+        </div>
+        <div class="counter-card">
+            <h3>Nearest Exam</h3>
+            <p id="nearestExam">-</p>
+        </div>
+        <div class="counter-card">
+            <h3>Urgent Tasks</h3>
+            <p id="urgentCount">0</p>
+        </div>
+    </section>
+
+    <section class="chart-section">
+        <div class="section-title-row">
+            <h3>Task Status Diagram</h3>
+            <span class="muted-label">Completed vs Pending</span>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="statusChart"></canvas>
+        </div>
+    </section>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/stats.js"></script>
+</body>
+</html>
